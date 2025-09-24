@@ -1,7 +1,7 @@
 import { MouseEvent } from "react";
 
 export const ScrollHandler = (
-  e: MouseEvent<HTMLAnchorElement, MouseEvent>,
+  e: MouseEvent<HTMLAnchorElement> | MouseEvent<HTMLDivElement>,
   target: string
 ) => {
   e.preventDefault();

@@ -1,5 +1,5 @@
 "use client";
-import { motion } from "framer-motion";
+import { cubicBezier, motion } from "framer-motion";
 import { cn } from "@/lib/utils";
 import React from "react";
 import Wrapper from "./Wrapper";
@@ -149,7 +149,11 @@ const HeroSection = () => {
             <motion.div
               style={{ willChange: "transform" }}
               animate={{ y: [0, 12, 0] }}
-              transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
+              transition={{
+                duration: 6,
+                repeat: Infinity,
+                ease: cubicBezier(0.42, 0, 0.58, 1),
+              }}
             >
               <Image
                 src={heroImg}

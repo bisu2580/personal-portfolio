@@ -21,11 +21,25 @@ import {
   sectionVariants,
 } from "@/animations";
 
-const LeetCodeIcon = () => (
-  <Image src={leetcode} alt="leetcode-icon" width={32} height={32} />
+const LeetCodeIcon = ({ className }: { className?: string }) => (
+  <Image
+    src={leetcode}
+    alt="leetcode-icon"
+    width={32}
+    height={32}
+    className={className}
+  />
 );
 
-const GfgIcon = () => <Image src={gfg} alt="gfg icon" width={32} height={32} />;
+const GfgIcon = ({ className }: { className?: string }) => (
+  <Image
+    src={gfg}
+    alt="gfg icon"
+    width={32}
+    height={32}
+    className={className}
+  />
+);
 
 type InfoCardProps = {
   icon: React.ReactNode;
@@ -33,7 +47,7 @@ type InfoCardProps = {
   subtitle: string;
   mainText: string;
   href?: string;
-  variants?: any;
+  variants?: import("framer-motion").Variants;
 };
 
 const InfoCard: React.FC<InfoCardProps> = ({
@@ -144,7 +158,7 @@ export default function AboutMeSection() {
               >
                 {/* ... All your <p> tags with bio ... */}
                 <p className="mb-6 leading-relaxed lg:text-base text-sm">
-                  I’m{" "}
+                  I&apos;m{" "}
                   <span className="font-semibold bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-indigo-400">
                     Biswajit Sahoo
                   </span>
@@ -157,7 +171,7 @@ export default function AboutMeSection() {
                     clean, scalable,and high-performance{" "}
                   </span>
                   web applications. My journey began with a curiosity for how
-                  the web works, and over time I’ve honed my skills in both{" "}
+                  the web works, and over time I&apos;ve honed my skills in both{" "}
                   <span className="inline-block px-2 py-0.5 rounded-md bg-white/5 border border-white/6 text-white/90 md:font-medium font-normal italic">
                     front-end and back-end development,{" "}
                   </span>
@@ -181,7 +195,7 @@ export default function AboutMeSection() {
                 </p>
 
                 <p className="leading-relaxed lg:text-base text-sm">
-                  I'm always exploring new technologies and am particularly
+                  I&apos;m always exploring new technologies and am particularly
                   excited by the potential of{" "}
                   <span className="font-semibold bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-indigo-400">
                     AI{" "}

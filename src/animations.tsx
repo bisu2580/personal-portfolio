@@ -1,3 +1,5 @@
+import { cubicBezier } from "framer-motion";
+
 // Nav Menu Animations
 export const dockVariant = {
   hidden: { y: 50, opacity: 0 },
@@ -5,7 +7,7 @@ export const dockVariant = {
     y: 0,
     opacity: 1,
     transition: {
-      type: "spring",
+      type: "spring" as const,
       stiffness: 120,
       damping: 14,
       delay: 0.6,
@@ -48,7 +50,11 @@ export const sectionVariants = {
 
 export const imageVariants = {
   hidden: { x: -30, opacity: 0 },
-  visible: { x: 0, opacity: 1, transition: { duration: 0.6, ease: "easeOut" } },
+  visible: {
+    x: 0,
+    opacity: 1,
+    transition: { duration: 0.6, ease: cubicBezier(0.4, 0, 0.2, 1) },
+  },
 };
 
 export const contentVariants = {
@@ -56,7 +62,11 @@ export const contentVariants = {
   visible: {
     x: 0,
     opacity: 1,
-    transition: { duration: 0.6, ease: "easeOut", staggerChildren: 0.15 },
+    transition: {
+      duration: 0.6,
+      ease: cubicBezier(0.4, 0, 0.2, 1),
+      staggerChildren: 0.15,
+    },
   },
 };
 
@@ -70,7 +80,7 @@ export const cardPopVariant = {
   visible: {
     scale: 1,
     opacity: 1,
-    transition: { type: "spring", stiffness: 200, damping: 20 },
+    transition: { type: "spring" as const, stiffness: 200, damping: 20 },
   },
 };
 
@@ -92,7 +102,7 @@ export const contactItemVariants = {
     y: 0,
     transition: {
       duration: 0.5,
-      ease: "easeOut",
+      ease: cubicBezier(0.42, 0, 0.58, 1),
     },
   },
 };
@@ -104,7 +114,7 @@ export const globeVariants = {
     scale: 1,
     transition: {
       duration: 0.6,
-      ease: "easeOut",
+      ease: cubicBezier(0.42, 0, 0.58, 1),
     },
   },
 };
@@ -116,7 +126,7 @@ export const contactFormVariants = {
     x: 0,
     transition: {
       duration: 0.6,
-      ease: "easeOut",
+      ease: cubicBezier(0.42, 0, 0.58, 1),
     },
   },
 };
@@ -149,7 +159,7 @@ export const projectCardVariants = {
     opacity: 1,
     y: 0,
     transition: {
-      type: "spring",
+      type: "spring" as const,
       stiffness: 100,
       damping: 15,
     },
@@ -186,7 +196,7 @@ export const navIconVariants = {
     scale: 1,
     opacity: 1,
     transition: {
-      type: "spring",
+      type: "spring" as const,
       stiffness: 260,
       damping: 20,
     },
@@ -209,7 +219,7 @@ export const heroitemVariants = {
   visible: {
     y: 0,
     opacity: 1,
-    transition: { type: "spring", stiffness: 100 },
+    transition: { type: "spring" as const, stiffness: 100 },
   },
 };
 
@@ -219,7 +229,7 @@ export const heroimageVariants = {
     opacity: 1,
     transition: {
       duration: 1,
-      ease: "easeOut",
+      ease: cubicBezier(0.42, 0, 0.58, 1),
       delay: 0.4,
     },
   },

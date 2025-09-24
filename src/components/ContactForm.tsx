@@ -1,6 +1,6 @@
 "use client";
 import emailjs from "@emailjs/browser";
-import React, { useState } from "react";
+import React, { ChangeEvent, FormEvent, useState } from "react";
 import { MagicCard } from "./ui/magic-card";
 import { RainbowButton } from "./ui/rainbow-button";
 import { SendIcon } from "lucide-react";
@@ -13,12 +13,14 @@ const ContactForm = () => {
   });
   const [status, setStatus] = useState("");
 
-  const handleChange = (e) => {
+  const handleChange = (
+    e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
     const { id, value } = e.target;
     setFormData((prev) => ({ ...prev, [id]: value }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setStatus("sending");
 
@@ -93,7 +95,7 @@ const ContactForm = () => {
             </label>
             <textarea
               id="message"
-              rows="5"
+              rows={5}
               placeholder="Let's build something amazing..."
               value={formData.message}
               onChange={handleChange}
