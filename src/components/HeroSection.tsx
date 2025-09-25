@@ -9,7 +9,6 @@ import heroImg from "../assets/heroImgg.png";
 import Image from "next/image";
 import { floatVariants } from "./ui/float-animations";
 import { AnimatedShinyText } from "./ui/animated-shiny-text";
-import { HoverBorderGradient } from "./ui/hover-border-gradient";
 import NavBar from "./NavBar";
 import { ScrollHandler } from "./ScrollHandler";
 import { Cover } from "./ui/cover";
@@ -19,6 +18,7 @@ import {
   heroimageVariants,
   heroitemVariants,
 } from "@/animations";
+import { ShimmerButton } from "./ui/shimmer-button";
 
 type FloatingChipProps = {
   text: string;
@@ -86,14 +86,12 @@ const HeroSection = () => {
                 <FolderOpenDot />
                 View My Work
               </RainbowButton>
-              <HoverBorderGradient
-                containerClassName="rounded-full"
-                as="button"
-                className="dark:bg-black bg-white text-black dark:text-white flex items-center space-x-2 py-1 text-sm lg:text-base"
-              >
+              <ShimmerButton className="shadow-2xl flex gap-2">
                 <Download className="w-4 h-4" />
-                <span>My Resume</span>
-              </HoverBorderGradient>
+                <span className="text-center text-sm leading-none font-normal tracking-tight whitespace-pre-wrap text-white lg:text-base dark:from-white dark:to-slate-900/10">
+                  Download Resume
+                </span>
+              </ShimmerButton>
             </motion.div>
           </div>
           {/* Right Section */}

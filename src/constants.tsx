@@ -29,9 +29,11 @@ import {
 import { VscVscode } from "react-icons/vsc";
 import { Github, Linkedin, Twitter } from "lucide-react";
 
+import type { StaticImageData } from "next/image";
+
 export type Project = {
   id: number;
-  image: any;
+  image: string | StaticImageData;
   title: string;
   description: string;
   techIcons: React.ReactNode[];

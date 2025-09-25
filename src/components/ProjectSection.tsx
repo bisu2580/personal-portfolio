@@ -7,12 +7,12 @@ import { cn } from "@/lib/utils";
 import { AnimatedGradientText } from "./ui/animated-gradient-text";
 import { AuroraText } from "./ui/aurora-text";
 import { projects } from "@/constants";
-import { HoverBorderGradient } from "./ui/hover-border-gradient";
 import {
   projectCardVariants,
   projectItemVariants,
   projectSectionVariants,
 } from "@/animations";
+import { ShimmerButton } from "./ui/shimmer-button";
 
 export default function ProjectsSection() {
   const [visibleCount, setVisibleCount] = useState(3);
@@ -61,13 +61,12 @@ export default function ProjectsSection() {
 
           <div className="mt-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-5 gap-y-20">
             {projects.slice(0, visibleCount).map((project) => (
-              // --- MODIFIED: Each card now triggers its own animation ---
               <motion.div
                 key={project.id}
                 variants={projectCardVariants}
                 initial="hidden"
                 whileInView="visible"
-                viewport={{ once: true, amount: 0.2 }} // Animate when 20% of the card is visible
+                viewport={{ once: true, amount: 0.2 }}
                 layout
               >
                 <ProjectCard {...project} />
@@ -80,14 +79,14 @@ export default function ProjectsSection() {
               variants={projectItemVariants}
               className="flex justify-center mt-20"
             >
-              <HoverBorderGradient
-                containerClassName="rounded-full"
-                as="button"
+              <ShimmerButton
+                className="shadow-2xl flex gap-2"
                 onClick={handleLoadMore}
-                className="dark:bg-gradient-to-br from-[#0d0d1f] to-[#050510] bg-white text-black dark:text-white font-montserrat flex items-center space-x-2"
               >
-                <span>Load More</span>
-              </HoverBorderGradient>
+                <span className="text-center text-sm leading-none font-normal tracking-tight whitespace-pre-wrap text-white lg:text-base dark:from-white dark:to-slate-900/10">
+                  Load More
+                </span>
+              </ShimmerButton>
             </motion.div>
           )}
         </div>

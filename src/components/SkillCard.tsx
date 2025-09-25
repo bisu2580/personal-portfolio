@@ -1,7 +1,6 @@
 "use client";
 import React, { ReactNode } from "react";
 import { motion } from "framer-motion";
-import { FaStar } from "react-icons/fa";
 import { CometCard } from "./ui/comet-card";
 
 type SkillCardProps = {
@@ -11,12 +10,7 @@ type SkillCardProps = {
   borderColor?: string; // accent color for border glow
 };
 
-const SkillCard = ({
-  icon,
-  text,
-  level,
-  borderColor = "white",
-}: SkillCardProps) => {
+const SkillCard = ({ icon, text, borderColor = "white" }: SkillCardProps) => {
   return (
     <CometCard>
       <motion.div

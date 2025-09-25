@@ -1,10 +1,10 @@
 "use client";
 import { motion } from "framer-motion";
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 import { PinContainer } from "./ui/3d-pin";
 
 type ProjectCardProps = {
-  image: string;
+  image: string | StaticImageData;
   title: string;
   description: string;
   techIcons: React.ReactNode[];
