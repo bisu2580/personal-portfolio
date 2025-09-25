@@ -8,7 +8,7 @@ import { navLinks } from "@/constants";
 const NavMenu = () => {
   return (
     <motion.div
-      className="flex justify-center items-center z-100 absolute top-[30%] right-3 md:bottom-4 md:left-0 md:top-[90%]"
+      className="flex justify-center items-center z-100 absolute top-[50%] right-3 md:bottom-4 md:left-0 md:top-[90%]"
       variants={dockVariant}
       initial="hidden"
       animate="visible"

@@ -3,7 +3,7 @@
 ![Portfolio Screenshot](./src/assets/homepage.png)
 This is the repository for my personal portfolio website, designed to showcase my skills, projects, and professional journey as a Fullstack Developer. It's built with modern technologies to be fast, responsive, and visually engaging.
 
-**Live Site URL:** [**your-live-url.vercel.app**](https://your-live-url.vercel.app) ---
+**Live Site URL:** [**https://personal-portfolio-one-psi-44.vercel.app/**](https://personal-portfolio-one-psi-44.vercel.app/)
 
 ## ## Features
 
