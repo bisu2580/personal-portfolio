@@ -53,7 +53,7 @@ export default function SkillsSection() {
 
         <motion.div
           variants={itemVariant}
-          className="mt-16 grid grid-cols-1 lg:grid-cols-2 gap-x-10 gap-y-16 max-w-7xl mx-auto md:px-20 px-10 relative"
+          className="mt-16 grid grid-cols-1 lg:grid-cols-2 gap-x-10 gap-y-16 max-w-7xl mx-auto md:px-20 px-[15%] relative"
         >
           {/* Programming Languages */}
           <motion.div

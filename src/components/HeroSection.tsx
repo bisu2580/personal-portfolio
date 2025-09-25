@@ -41,12 +41,21 @@ const FloatingChip = ({ text, hide }: FloatingChipProps) => (
   </div>
 );
 const HeroSection = () => {
+  const handleDownload = () => {
+    const resumeFilePath = "/resume_biswajit_sahoo.pdf";
+    const link = document.createElement("a");
+    link.href = resumeFilePath;
+    link.setAttribute("download", "biswajit_resume.pdf");
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
   return (
     <Wrapper>
       <section id="home">
         <NavBar />
         <motion.div
-          className="relative z-10 h-screen max-w-screen flex flex-col md:flex-row gap-10 px-5 md:px-12"
+          className="relative z-50 h-screen max-w-screen flex flex-col md:flex-row gap-10 px-5 md:px-12"
           variants={containerVariants}
           initial="hidden"
           animate="visible"
@@ -77,16 +86,20 @@ const HeroSection = () => {
             <motion.div
               variants={heroitemVariants}
               className="flex flex-wrap gap-3 justify-center items-center lg:justify-start"
-              onClick={(e) => ScrollHandler(e, "contact")}
             >
-              <RainbowButton
-                variant="outline"
-                className="rounded-lg text-xs lg:text-sm"
+              <div onClick={(e) => ScrollHandler(e, "contact")}>
+                <RainbowButton
+                  variant="outline"
+                  className="rounded-lg text-xs lg:text-sm"
+                >
+                  <FolderOpenDot />
+                  View My Work
+                </RainbowButton>
+              </div>
+              <ShimmerButton
+                className="shadow-2xl flex gap-2"
+                onClick={handleDownload}
               >
-                <FolderOpenDot />
-                View My Work
-              </RainbowButton>
-              <ShimmerButton className="shadow-2xl flex gap-2">
                 <Download className="w-4 h-4" />
                 <span className="text-center text-sm leading-none font-normal tracking-tight whitespace-pre-wrap text-white lg:text-base dark:from-white dark:to-slate-900/10">
                   Download Resume
