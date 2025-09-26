@@ -1,5 +1,6 @@
 import { quickLinks, socialLinks } from "@/constants";
 import { Mail } from "lucide-react";
+import { ScrollHandler } from "./ScrollHandler";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -29,6 +30,9 @@ export default function Footer() {
                 <li key={link.href}>
                   <a
                     href={link.href}
+                    onClick={(e) =>
+                      ScrollHandler(e, link.href.replace("#", ""))
+                    }
                     className="hover:text-sky-400 transition-colors"
                   >
                     {link.label}

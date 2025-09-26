@@ -16,15 +16,34 @@ export const PinContainer = ({
   className?: string;
   containerClassName?: string;
 }) => {
-  const [transform, setTransform] = useState(
-    "translate(-50%,-50%) rotateX(0deg)"
-  );
+  const [isHovered, setIsHovered] = useState(false);
+  const transformOnEnter = "translate(-50%,-50%) rotateX(40deg) scale(0.8)";
+  const transformOnLeave = "translate(-50%,-50%) rotateX(0deg) scale(1)";
+  // const [transform, setTransform] = useState(
+  //   "translate(-50%,-50%) rotateX(0deg)"
+  // );
 
+  const transform = isHovered ? transformOnEnter : transformOnLeave;
   const onMouseEnter = () => {
-    setTransform("translate(-50%,-50%) rotateX(40deg) scale(0.8)");
+    // setTransform("translate(-50%,-50%) rotateX(40deg) scale(0.8)");
+    if (!("ontouchstart" in window)) {
+      setIsHovered(true);
+    }
   };
   const onMouseLeave = () => {
-    setTransform("translate(-50%,-50%) rotateX(0deg) scale(1)");
+    // setTransform("translate(-50%,-50%) rotateX(0deg) scale(1)");
+    if (!("ontouchstart" in window)) {
+      setIsHovered(false);
+    }
+  };
+  const handleContainerClick = (e: React.MouseEvent<HTMLDivElement>) => {
+    // If it's a link, let the link navigation happen
+    if (href) {
+      return;
+    }
+    // Prevent event bubbling up if necessary
+    e.preventDefault();
+    setIsHovered(!isHovered);
   };
 
   return (
@@ -35,6 +54,7 @@ export const PinContainer = ({
       )}
       onMouseEnter={onMouseEnter}
       onMouseLeave={onMouseLeave}
+      onClick={handleContainerClick}
       // href={href || "/"}
       // target="_blank"
       // rel="noopener noreferrer"
@@ -50,12 +70,24 @@ export const PinContainer = ({
           style={{
             transform: transform,
           }}
-          className="absolute left-1/2 p-4 top-1/2  flex justify-start items-start  rounded-2xl  shadow-[0_8px_16px_rgb(0_0_0/0.4)] bg-black border border-white/[0.1] group-hover/pin:border-white/[0.2] transition duration-700 overflow-hidden"
+          className="absolute left-1/2 p-4 top-1/2 flex justify-start items-start rounded-2xl shadow-[0_8px_16px_rgb(0_0_0/0.4)] bg-black border border-white/[0.1] group-hover/pin:border-white/[0.2] transition duration-700 overflow-hidden"
         >
           <div className={cn("relative z-50 ", className)}>{children}</div>
         </div>
       </div>
-      <PinPerspective title={title} href={href} />
+      <div
+        className={cn(
+          // Default styles, hidden
+          "pointer-events-none w-96 h-80 flex items-center justify-center opacity-0 z-[60] transition-opacity duration-500",
+          // Show on group hover for desktop
+          "group-hover/pin:opacity-100",
+          // Conditionally show on tap for mobile
+          { "opacity-100 pointer-events-auto": isHovered }
+        )}
+      >
+        <PinPerspective title={title} href={href} />
+      </div>
+      {/* <PinPerspective title={title} href={href} /> */}
     </div>
   );
 };
@@ -68,7 +100,7 @@ export const PinPerspective = ({
   href?: string;
 }) => {
   return (
-    <motion.div className="pointer-events-auto w-96 h-80 flex items-center justify-center opacity-0 group-hover/pin:opacity-100 z-[60] transition duration-500">
+    <motion.div className="w-full h-full flex items-center justify-center">
       <div className=" w-full h-full -mt-7 flex-none inset-0">
         <div className="absolute top-0 inset-x-0  flex justify-center">
           <a

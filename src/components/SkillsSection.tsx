@@ -63,7 +63,7 @@ export default function SkillsSection() {
             <h3 className="text-xl md:text-2xl text-neutral-200 mb-6 font-montserrat">
               Programming Languages
             </h3>
-            <div className="flex flex-wrap gap-6 font-montserrat lg:px-12">
+            <div className="flex flex-wrap gap-6 font-montserrat px-6 lg:px-12">
               {programmingLanguages.map((skill, index) => (
                 <motion.div
                   key={index}
@@ -86,7 +86,7 @@ export default function SkillsSection() {
             <h3 className="text-xl md:text-2xl text-neutral-200 mb-6 font-montserrat">
               Frontend Development
             </h3>
-            <div className="flex flex-wrap gap-6 font-montserrat lg:px-12">
+            <div className="flex flex-wrap gap-6 font-montserrat px-6 lg:px-12">
               {frontendSkills.map((skill, index) => (
                 <motion.div
                   key={index}
@@ -109,7 +109,7 @@ export default function SkillsSection() {
             <h3 className="text-xl md:text-2xl text-neutral-200 mb-6 font-montserrat">
               Backend Development
             </h3>
-            <div className="flex flex-wrap gap-6 font-montserrat lg:px-12">
+            <div className="flex flex-wrap gap-6 font-montserrat px-6 lg:px-12">
               {backendSkills.map((skill, index) => (
                 <motion.div
                   key={index}
@@ -132,7 +132,7 @@ export default function SkillsSection() {
             <h3 className="text-xl md:text-2xl text-neutral-200 mb-6 font-montserrat">
               Development Tools
             </h3>
-            <div className="flex flex-wrap gap-6 font-montserrat lg:px-12">
+            <div className="flex flex-wrap gap-6 font-montserrat px-6 lg:px-12">
               {devTools.map((skill, index) => (
                 <motion.div
                   key={index}
