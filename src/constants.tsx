@@ -10,6 +10,7 @@ import projectImg2 from "./assets/website2.png";
 import projectImg3 from "./assets/website3.png";
 import projectImg4 from "./assets/website4.png";
 import projectImg5 from "./assets/website5.png";
+import projectImg6 from "./assets/homepage.png";
 import {
   SiReact,
   SiNextdotjs,
@@ -79,6 +80,19 @@ export const projects: Project[] = [
   },
   {
     id: 2,
+    image: projectImg6,
+    title: "My Portfolio Website",
+    description:
+      "A Dark, modern portfolio website of me having amazing animations",
+    techIcons: [
+      <SiReact key="react" />,
+      <SiNextdotjs key="nextjs" />,
+      <SiTailwindcss key="tailwindcss" />,
+    ],
+    link: "https://personal-portfolio-one-psi-44.vercel.app/",
+  },
+  {
+    id: 3,
     image: projectImg2,
     title: "Password Generator",
     description:
@@ -91,7 +105,7 @@ export const projects: Project[] = [
     link: "https://bisu2580.github.io/password-generator",
   },
   {
-    id: 3,
+    id: 4,
     image: projectImg3,
     title: "Movie Details App",
     description:
@@ -100,7 +114,7 @@ export const projects: Project[] = [
     link: "https://biswajit-sahoo-movie-app.netlify.app",
   },
   {
-    id: 4,
+    id: 5,
     image: projectImg4,
     title: "Weather App",
     description:
@@ -109,7 +123,7 @@ export const projects: Project[] = [
     link: "https://bisu2580.github.io/weather-app",
   },
   {
-    id: 5,
+    id: 6,
     image: projectImg5,
     title: "Dev Detective App",
     description:
