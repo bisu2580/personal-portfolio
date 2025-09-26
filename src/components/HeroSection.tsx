@@ -87,7 +87,7 @@ const HeroSection = () => {
               variants={heroitemVariants}
               className="flex flex-wrap gap-3 justify-center items-center lg:justify-start"
             >
-              <div onClick={(e) => ScrollHandler(e, "contact")}>
+              <div onClick={(e) => ScrollHandler(e, "projects")}>
                 <RainbowButton
                   variant="outline"
                   className="rounded-lg text-xs lg:text-sm"
