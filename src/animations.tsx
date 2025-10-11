@@ -185,8 +185,9 @@ export const iconParentVariants = {
   hidden: {},
   visible: {
     transition: {
-      staggerChildren: 0.15,
-      delayChildren: 0.4,
+      staggerChildren: 0.12,
+      delayChildren: 0.2,
+      ease: cubicBezier(0.42, 0, 0.58, 1),
     },
   },
 };
@@ -197,8 +198,9 @@ export const navIconVariants = {
     opacity: 1,
     transition: {
       type: "spring" as const,
-      stiffness: 260,
-      damping: 20,
+      stiffness: 50,
+      damping: 15,
+      duration: 0.3,
     },
   },
 };
