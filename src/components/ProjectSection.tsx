@@ -31,7 +31,7 @@ export default function ProjectsSection() {
         whileInView="visible"
         viewport={{ once: true, amount: 0.1 }}
       >
-        <div className="max-w-7xl mx-auto px-6 md:px-12 lg:px-15">
+        <div className="max-w-7xl mx-auto px-6 md:px-0 lg:px-15">
           <motion.div
             variants={projectItemVariants}
             className="flex flex-col items-center space-y-4"

@@ -58,9 +58,9 @@ export default function SkillsSection() {
           {/* Programming Languages */}
           <motion.div
             variants={itemVariant}
-            className="flex flex-col items-center"
+            className="flex flex-col items-start md:items-center"
           >
-            <h3 className="text-xl md:text-2xl text-neutral-200 mb-6 font-montserrat">
+            <h3 className="text-xl md:text-2xl text-neutral-200 mb-6 font-montserrat px-6 md:px-0">
               Programming Languages
             </h3>
             <div className="flex flex-wrap gap-6 font-montserrat px-6 lg:px-12">
@@ -81,9 +81,9 @@ export default function SkillsSection() {
           {/* Frontend */}
           <motion.div
             variants={itemVariant}
-            className="flex flex-col items-center"
+            className="flex flex-col items-start md:items-center"
           >
-            <h3 className="text-xl md:text-2xl text-neutral-200 mb-6 font-montserrat">
+            <h3 className="text-xl md:text-2xl text-neutral-200 mb-6 font-montserrat px-6 md:px-0">
               Frontend Development
             </h3>
             <div className="flex flex-wrap gap-6 font-montserrat px-6 lg:px-12">
@@ -104,9 +104,9 @@ export default function SkillsSection() {
           {/* Backend */}
           <motion.div
             variants={itemVariant}
-            className="flex flex-col items-center"
+            className="flex flex-col items-start md:items-center"
           >
-            <h3 className="text-xl md:text-2xl text-neutral-200 mb-6 font-montserrat">
+            <h3 className="text-xl md:text-2xl text-neutral-200 mb-6 font-montserrat px-6 md:px-0">
               Backend Development
             </h3>
             <div className="flex flex-wrap gap-6 font-montserrat px-6 lg:px-12">
@@ -127,9 +127,9 @@ export default function SkillsSection() {
           {/* Development Tools */}
           <motion.div
             variants={itemVariant}
-            className="flex flex-col items-center"
+            className="flex flex-col items-start md:items-center"
           >
-            <h3 className="text-xl md:text-2xl text-neutral-200 mb-6 font-montserrat">
+            <h3 className="text-xl md:text-2xl text-neutral-200 mb-6 font-montserrat px-6 md:px-0">
               Development Tools
             </h3>
             <div className="flex flex-wrap gap-6 font-montserrat px-6 lg:px-12">

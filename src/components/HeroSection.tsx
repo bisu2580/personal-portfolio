@@ -55,17 +55,17 @@ const HeroSection = () => {
       <section id="home">
         <NavBar />
         <motion.div
-          className="relative z-50 h-screen max-w-screen flex flex-col md:flex-row gap-10 px-5 md:px-12"
+          className="relative z-50 h-screen max-w-screen flex flex-col md:flex-row gap-10 px-5 lg:px-12"
           variants={containerVariants}
           initial="hidden"
           animate="visible"
         >
           {/* Left Section */}
-          <div className="flex flex-col gap-10 lg:w-1/2 w-full md:justify-center lg:py-12 py-4">
+          <div className="flex flex-col gap-10 lg:w-[60%] w-full md:justify-center lg:py-12 py-4">
             <div className="flex flex-col gap-4">
               <motion.h1
                 variants={heroitemVariants}
-                className="text-3xl font-bold lg:tracking-tight md:text-5xl lg:text-6xl font-montserrat lg:leading-tight leading-snug text-center lg:text-left"
+                className="text-3xl font-bold lg:tracking-tight md:text-4xl lg:text-6xl font-montserrat lg:leading-tight leading-snug text-center lg:text-left"
               >
                 Hi, I am{" "}
                 <Cover>
@@ -76,7 +76,7 @@ const HeroSection = () => {
               </motion.h1>
               <motion.p
                 variants={heroitemVariants}
-                className="text-gray-600 dark:text-gray-400 text-sm sm:text-base md:text-lg text-center lg:text-left"
+                className="text-gray-600 dark:text-gray-400 text-base lg:text-xl text-center lg:text-left"
               >
                 A dedicated developer focused on writing high-performance code
                 to create reliable, user-friendly, and impactful digital
@@ -110,9 +110,9 @@ const HeroSection = () => {
           {/* Right Section */}
           <motion.div
             variants={heroimageVariants}
-            className="lg:w-[50%] w-full rounded-2xl overflow-hidden p-10 relative -mt-5 lg:mt-0"
+            className="lg:w-1/2 w-full rounded-2xl overflow-hidden p-10 relative sm:-mt-5 md:mt-0"
           >
-            <div className="absolute inset-0 bg-gradient-to-r from-purple-500 via bg-purple-700 to-blue-400 rounded-full blur-2xl lg:blur-3xl opacity-40 mt-[20%] mb-[30%] ml-[20%] mr-[20%]"></div>
+            <div className="absolute inset-0 bg-gradient-to-r from-purple-500 via bg-purple-700 to-blue-400 rounded-full blur-2xl md:blur-4xl lg:blur-3xl opacity-40 mt-[20%] mb-[30%] ml-[20%] mr-[20%]"></div>
             <div className="absolute inset-0 pointer-events-none">
               {/* Card 1 */}
               <motion.div

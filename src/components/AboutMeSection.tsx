@@ -135,7 +135,7 @@ export default function AboutMeSection() {
             {/* Left Side: Image */}
             <motion.div
               variants={imageVariants}
-              className="w-full lg:w-[65%] relative"
+              className="w-full md:w-[50%] lg:w-[65%] relative"
             >
               <div className="relative w-full h-[60vh] lg:h-[85vh] shadow-lg rounded-3xl overflow-hidden">
                 <Image
