@@ -3,7 +3,11 @@
     {
       "source": "/",
       "destination": "https://biswajit-sahoo-portfolio.vercel.app/",
+      "has": [
+        { "type": "host", "value": "personal-portfolio-one-psi-44.vercel.app" }
+      ],
       "statusCode": 308
     }
   ]
 }
+
