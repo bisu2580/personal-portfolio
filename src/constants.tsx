@@ -26,6 +26,7 @@ import {
   SiPython,
   SiCplusplus,
   SiTypescript,
+  SiC,
 } from "react-icons/si";
 import { VscVscode } from "react-icons/vsc";
 import { Github, Linkedin, Twitter } from "lucide-react";
@@ -186,6 +187,7 @@ export const programmingLanguages = [
   },
   { icon: <SiPython />, text: "Python", level: 4 },
   { icon: <SiCplusplus className="text-[#5599ff]" />, text: "C++", level: 3 },
+  { icon: <SiC className="text-blue-400" />, text: "C", level: 4 },
 ];
 
 export const frontendSkills = [
