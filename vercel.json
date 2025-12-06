@@ -1,0 +1,9 @@
+{
+  "redirects": [
+    {
+      "source": "/",
+      "destination": "https://biswajit-sahoo-portfolio.vercel.app/",
+      "statusCode": 308
+    }
+  ]
+}
