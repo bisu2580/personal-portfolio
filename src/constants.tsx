@@ -27,6 +27,7 @@ import {
   SiCplusplus,
   SiTypescript,
   SiC,
+  SiCss3,
 } from "react-icons/si";
 import { VscVscode } from "react-icons/vsc";
 import { Github, Linkedin, Twitter } from "lucide-react";
@@ -199,6 +200,7 @@ export const frontendSkills = [
     level: 5,
   },
   { icon: <SiHtml5 className="text-orange-300" />, text: "HTML", level: 5 },
+  { icon: <SiCss3 className="text-blue-400" />, text: "CSS", level: 5 },
 ];
 
 export const backendSkills = [

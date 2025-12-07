@@ -42,7 +42,7 @@ const FloatingChip = ({ text, hide }: FloatingChipProps) => (
 );
 const HeroSection = () => {
   const handleDownload = () => {
-    const resumeFilePath = "/resume_biswajit_sahoo.pdf";
+    const resumeFilePath = "/biswajit-fullstack-resume.pdf";
     const link = document.createElement("a");
     link.href = resumeFilePath;
     link.setAttribute("download", "biswajit_resume.pdf");
