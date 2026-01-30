@@ -32,9 +32,8 @@ const FloatingChip = ({ text, hide }: FloatingChipProps) => (
     )}
   >
     <AnimatedShinyText
-      className={`inline-flex items-center justify-center px-3 sm:px-4 py-1 text-xs sm:text-sm transition ease-out hover:text-neutral-600 hover:duration-300 hover:dark:text-neutral-400 ${
-        hide ? "hidden lg:block" : "block"
-      }`}
+      className={`inline-flex items-center justify-center px-3 sm:px-4 py-1 text-xs sm:text-sm transition ease-out hover:text-neutral-600 hover:duration-300 hover:dark:text-neutral-400 ${hide ? "hidden lg:block" : "block"
+        }`}
     >
       <span>{text}</span>
     </AnimatedShinyText>
@@ -42,7 +41,7 @@ const FloatingChip = ({ text, hide }: FloatingChipProps) => (
 );
 const HeroSection = () => {
   const handleDownload = () => {
-    const resumeFilePath = "/biswajit-fullstack-resume.pdf";
+    const resumeFilePath = "/biswajit_fullstack_resume.pdf";
     const link = document.createElement("a");
     link.href = resumeFilePath;
     link.setAttribute("download", "biswajit_resume.pdf");
