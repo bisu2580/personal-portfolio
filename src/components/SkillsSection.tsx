@@ -1,5 +1,5 @@
 "use client";
-import { motion } from "framer-motion"; // Import framer-motion
+import { motion } from "framer-motion";
 import SkillCard from "./SkillCard";
 import Wrapper from "./Wrapper";
 import { AnimatedGradientText } from "./ui/animated-gradient-text";

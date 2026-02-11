@@ -78,7 +78,7 @@ export const projects: Project[] = [
       <SiNextdotjs key="nextjs" />,
       <SiTailwindcss key="tailwindcss" />,
     ],
-    link: "https://imagiur-ai.onrender.com",
+    link: "https://imagiur-ai.vercel.app/",
   },
   {
     id: 2,
