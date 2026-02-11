@@ -1,7 +1,6 @@
 "use client";
 import { cubicBezier, motion } from "framer-motion";
 import { cn } from "@/lib/utils";
-import React from "react";
 import Wrapper from "./Wrapper";
 import { Download, FolderOpenDot } from "lucide-react";
 import { RainbowButton } from "./ui/rainbow-button";
@@ -19,6 +18,7 @@ import {
   heroitemVariants,
 } from "@/animations";
 import { ShimmerButton } from "./ui/shimmer-button";
+import { LayoutTextFlip } from "./ui/latout-text-flip";
 
 type FloatingChipProps = {
   text: string;
@@ -28,12 +28,13 @@ type FloatingChipProps = {
 const FloatingChip = ({ text, hide }: FloatingChipProps) => (
   <div
     className={cn(
-      "group rounded-full border border-black/5 bg-neutral-100 text-white transition-all ease-in hover:cursor-pointer hover:bg-neutral-200 dark:border-white/5 dark:bg-neutral-900 dark:hover:bg-neutral-800"
+      "group rounded-full border border-black/5 bg-neutral-100 text-white transition-all ease-in hover:cursor-pointer hover:bg-neutral-200 dark:border-white/5 dark:bg-neutral-900 dark:hover:bg-neutral-800",
     )}
   >
     <AnimatedShinyText
-      className={`inline-flex items-center justify-center px-3 sm:px-4 py-1 text-xs sm:text-sm transition ease-out hover:text-neutral-600 hover:duration-300 hover:dark:text-neutral-400 ${hide ? "hidden lg:block" : "block"
-        }`}
+      className={`inline-flex items-center justify-center px-3 sm:px-4 py-1 text-xs sm:text-sm transition ease-out hover:text-neutral-600 hover:duration-300 hover:dark:text-neutral-400 ${
+        hide ? "hidden lg:block" : "block"
+      }`}
     >
       <span>{text}</span>
     </AnimatedShinyText>
@@ -66,13 +67,31 @@ const HeroSection = () => {
                 variants={heroitemVariants}
                 className="text-3xl font-bold lg:tracking-tight md:text-4xl lg:text-6xl font-montserrat lg:leading-tight leading-snug text-center lg:text-left"
               >
-                Hi, I am{" "}
-                <Cover>
-                  {" "}
-                  <AuroraText>Biswajit</AuroraText>
-                </Cover>
-                , a Software Developer Based in Odisha
+                <div className="block">
+                  <span>I am </span>
+                  <Cover>
+                    <AuroraText>Biswajit</AuroraText>
+                  </Cover>
+                  <span>, a</span>
+                </div>
+
+                <div className="block mt-2">
+                  <LayoutTextFlip
+                    text=""
+                    words={[
+                      "Freelancer",
+                      "Web Developer",
+                      "Fullstack Developer",
+                    ]}
+                  />
+                </div>
+
+                {/* LINE 3 */}
+                <div className="block mt-2">
+                  <span>Based in Odisha</span>
+                </div>
               </motion.h1>
+
               <motion.p
                 variants={heroitemVariants}
                 className="text-gray-600 dark:text-gray-400 text-base lg:text-xl text-center lg:text-left"
